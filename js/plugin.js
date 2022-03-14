@@ -5,7 +5,7 @@ CODE BELOW
 
 function verification() {
 
-
+    // Cleanin'
     (document.querySelectorAll("input")).forEach((el) => el.classList.remove("errorInput"));
     (document.querySelectorAll("select")).forEach((el) => el.classList.remove("errorInput"));
     (document.querySelectorAll("textarea")).forEach((el) => el.classList.remove("errorInput"));
