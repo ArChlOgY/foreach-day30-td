@@ -54,4 +54,20 @@ body {
 
 .capitalize {
     text-transform: capitalize;
-}    
+}
+
+.image-form {
+    height: 150px;
+    width: auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .image-form {
+        height: 75px;
+    }
+    body, .recap-title, .fa-angellist {
+        font-size:medium;
+      }
+  
+
+  }

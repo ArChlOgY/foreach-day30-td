@@ -64,124 +64,122 @@
                                 <span class="infoClient"><?php echo htmlspecialchars($_POST['raisonSociale']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Code Client:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['codeClient']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Siret/Siren:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['siret']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Numéro TVA:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['tva']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Forme juridique:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['formeJuridique']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Type de client:
                                     <span class="infoClient capitalize"><?php echo htmlspecialchars($_POST['typeClient']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Secteur d'activité:
                                     <span class="infoClient capitalize"><?php echo htmlspecialchars($_POST['secteurActivites']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Civilité:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['civilite']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Nom:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['nom']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Prénom:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['prenom']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Adresse:
                                     <span class="infoClient"><?php echo htmlspecialchars($_POST['adresse']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Adresse (suite):
                                     <span class="infoClient"><?php echo htmlspecialchars($_POST['adresseSuite']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Code postal:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['codePostal']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Ville:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['ville']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Pays:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['pays']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Téléphone (fixe):
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['telephone']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Mobile:
                                     <span class="infoClient upper"><?php echo htmlspecialchars($_POST['mobile']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Email:
                                     <span class="infoClient"><?php echo htmlspecialchars($_POST['email']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Email (backup):
                                     <span class="infoClient"><?php echo htmlspecialchars($_POST['emailBackup']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Site internet:
                                     <span class="infoClient"><?php echo htmlspecialchars($_POST['siteInternet']); ?></span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">Commentaire:
                                     <span class="infoClient"><?php echo htmlspecialchars($_POST['commentaire']); ?></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 image text-center mt-3 mb-3">
+                                <?php
+
+                                    #var_dump($_FILES);
+
+                                    if(isset($_FILES['file'])){
+                                        $tmpName = $_FILES['file']['tmp_name'];
+                                        $name = $_FILES['file']['name'];
+                                        $size = $_FILES['file']['size'];
+                                        $error = $_FILES['file']['error'];
+                                        move_uploaded_file($tmpName, './img/'.$name);
+                                        echo '<img src="./img/'.$name.'" alt="pics" class="image-form">';
+
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>

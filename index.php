@@ -43,7 +43,7 @@
             <section>
                 <article>
                     <hr>
-                    <form action="enregistrer.php" method="post">
+                    <form action="enregistrer.php" method="post" enctype="multipart/form-data">
                     <div class="container form">
                         <div class="row">
                             <div class="col-12 form-title mb-3" >
@@ -189,6 +189,12 @@
                             <div class="col-12 mt-3">
                                 <label for="commentaire">Commentaire</label>
                                 <textarea  id="commentaire" name="commentaire" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <label for="commentaire">Fichier</label>
+                                <input type="file" id="fichier" name="file" class="form-control" >
                             </div>
                         </div>
                         <div class="row">
